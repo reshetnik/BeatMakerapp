@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  font-size: 40px;
+}
+
+header p {
+  font-size: 25px;
+}
+
+.pads {
+  background: lightblue;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  bottom: 0;
+  height: auto;
+}
+
+.pads > div {
+  height: 100px;
+  width: 100px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.pads .pad1 {
+  background: #60d394;
+}
+
+.pads .pad2 {
+  background: #d36060;
+}
+
+.pads .pad3 {
+  background: #c060d3;
+}
+
+.pads .pad4 {
+  background: #d3d160;
+}
+
+.pads .pad5 {
+  background: #606bd3;
+}
+
+.pads .pad6 {
+  background: #60c2d3;
+}
+
+.visuals {
+  position: relative;
+  width: 100px;
+}
+
+.visuals > div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: coral;
+  -webkit-animation: heartbeat 500ms ease;
+          animation: heartbeat 500ms ease;
+}
+
+@-webkit-keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
