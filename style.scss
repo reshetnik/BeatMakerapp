@@ -65,6 +65,7 @@ header {
 .visuals {
     position: relative;
     width: 100px;
+    top: -100px;
 
     & > div {
         position: absolute;
@@ -72,9 +73,27 @@ header {
         width: 100px;
         border-radius: 50%;
         background-color: coral;
-        animation: heartbeat 500ms ease;
+        animation: heartbeat 500ms ease, pulse 700ms ease;
+        --box-shadow-color: red;
     }
 
+}
+
+.btn-rec {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: #E62F2F;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 200;
+    box-shadow: none;
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 @keyframes heartbeat {
@@ -82,6 +101,15 @@ header {
         transform: scale(1);
     }
     100% {
-        transform: scale(2);
+        transform: scale(1.5);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 55px rgba(0, 0, 0, 0);
     }
 }
